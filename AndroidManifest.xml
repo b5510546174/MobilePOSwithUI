@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.navigationdrawerexample"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="Mobile POS"
+        android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+        <activity
+            android:name="com.android.mobilepos.LoginActivity"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.mobilepos.MainActivity"
+            android:label="Mobile POS" >
+        </activity>
+        <activity
+            android:name="com.android.mobilepos.CashierContinueActivity"
+            android:label="@string/title_activity_cashier_continue" >
+        </activity>
+        <activity
+            android:name="com.android.mobilepos.CashierContinueFragment1"
+            android:label="@string/title_activity_cashier_continue2" >
+        </activity>
+        <activity
+            android:name="com.ui.extended.StoreManagerActivity"
+            android:label="@string/title_activity_store_manager" >
+        </activity>
+        <activity
+            android:name="com.ui.extended.InventoryManagerActivity"
+            android:label="@string/title_activity_inventory_manager" >
+        </activity>
+    </application>
+
+</manifest>

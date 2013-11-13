@@ -6,9 +6,9 @@ public class SaleLineItem {
 	public static final String DATABASE_TABLE = "SaleLineItems";
     public static final int DATABASE_VERSION = 1;
     public static final String TABLE_CREATE =
-        "create table if not exists SaleLineItems (_id integer primary key autoincrement , items text not null);";
+        "create table if not exists SaleLineItems (_id integer primary key not null , itemId text not null);";
    
-    public static final String COL_ITEMS = "items";
+    public static final String COL_ITEM_ID = "itemId";
     
     private int id;
     private ArrayList<Item> items;
@@ -38,13 +38,6 @@ public class SaleLineItem {
     {
     	items.add(item);
     }
-    
-    public String getItemsString(){
-    	StringBuilder sb = new StringBuilder();
-    	for(int i = 0 ; i < items.size() ; i++)
-    		sb.append(items.get(i).get_id()).append(" ");
-    	return sb.toString();
-    }
 
 	public int getId() {
 		return id;
@@ -52,5 +45,10 @@ public class SaleLineItem {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public double getTotal(){
+		//TODO
+		return 0;
 	}
 }
